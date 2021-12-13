@@ -32,11 +32,13 @@
 
                                     if ($fetchdata > 0)
                                     {
+                                        $account = 0;
                                         foreach($fetchdata as $key => $row)
                                         {
+                                            $account++;
                                             ?>
                                             <tr>
-                                                <td>1</td>
+                                                <td><?= $account ?></td>
                                                 <td><?= $row['firstname']; ?></td>
                                                 <td><?= $row['lastname']; ?></td>
                                                 <td><?= $row['address']; ?></td>
