@@ -12,9 +12,9 @@
         $zip = $_POST['codigozip'];
 
         $target_path = "images/";
-        $target_path = $target_path . basename($_FILES['foto']['name']);
+        $target_path = $target_path . md5($_FILES['foto']['name']) . ".jpg";
         if(move_uploaded_file($_FILES['foto']['tmp_name'], $target_path)) {
-            echo "El archivo ".  basename( $_FILES['foto']['name']). " ha sido subido";
+            echo "El archivo ".  md5( $_FILES['foto']['name']). " ha sido subido";
         } else{
             echo "Ha ocurrido un error, trate de nuevo!";
         }

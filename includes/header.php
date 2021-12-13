@@ -9,6 +9,20 @@
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <style>
+        .img-view-card
+        {
+            width: 100% !important;
+            height: 300px;
+        }
+        .card-first-name
+        {
+            font-size: 50px !important;
+        }
+        .card-view
+        {
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
