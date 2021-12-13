@@ -73,10 +73,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var table = document.querySelector("#table-register");
-        var dataTable = new DataTable(table);
-    </script>
 <?php
     include('includes/footer.php');
 ?>
