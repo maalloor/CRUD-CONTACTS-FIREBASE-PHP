@@ -10,7 +10,7 @@
                         <a href="add-register.php" class="btn btn-primary">ADD REGISTER</a>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="table-register">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -73,6 +73,10 @@
             </div>
         </div>
     </div>
+    <script>
+        var table = document.querySelector("#table-register");
+        var dataTable = new DataTable(table);
+    </script>
 <?php
     include('includes/footer.php');
 ?>
