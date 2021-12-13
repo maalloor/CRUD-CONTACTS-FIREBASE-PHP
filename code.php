@@ -11,19 +11,25 @@
         $gender = $_POST['genero'];
         $zip = $_POST['codigozip'];
 
+        $target_path = "images/";
+        $target_path = $target_path . basename($_FILES['foto']['name']);
+        if(move_uploaded_file($_FILES['foto']['tmp_name'], $target_path)) {
+            echo "El archivo ".  basename( $_FILES['foto']['name']). " ha sido subido";
+        } else{
+            echo "Ha ocurrido un error, trate de nuevo!";
+        }
         $postData = [
             'firstname' => $first_name,
             'lastname' => $last_name,
             'address' => $address,
             'city' => $city,
             'gender' => $gender,
-            'zip' => $zip
+            'zip' => $zip,
+            'photo' => "http://localhost/Proyectos/FIREBASE-PHP/".$target_path
         ];
 
         $ref_table = "contacts";
-
         $postRef = $database->getReference($ref_table)->push($postData);
-
         if ($postRef)
         {
             $_SESSION['status'] = "Data Inserted Successfully!";

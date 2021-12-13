@@ -18,7 +18,7 @@
                                 unset($_SESSION['status']);
                             }
                         ?>
-                        <form action="code.php" method="POST" class="row g-3">
+                        <form enctype="multipart/form-data" action="code.php" method="POST" class="row g-3">
                             <div class="col-md-6">
                                 <label for="nombre" class="form-label">First Name: </label>
                                 <input type="text" class="form-control" id="nombre" name="nombre">
@@ -46,6 +46,10 @@
                             <div class="col-md-2">
                                 <label for="codigozip" class="form-label">Zip</label>
                                 <input type="text" class="form-control" id="codigozip" name="codigozip">
+                            </div>
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Enter the photo: </label>
+                                <input class="form-control" type="file" id="foto" name="foto">
                             </div>
                             <div class="col-12">
                                 <button type="submit" name="save_data" class="btn btn-primary">ADD REGISTER</button>

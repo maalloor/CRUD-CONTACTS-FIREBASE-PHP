@@ -14,6 +14,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Photo</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Address</th>
@@ -39,6 +40,9 @@
                                             ?>
                                             <tr>
                                                 <td><?= $account ?></td>
+                                                <td>
+                                                    <img src="<?= $row['photo']; ?>" width="100" alt="">
+                                                </td>
                                                 <td><?= $row['firstname']; ?></td>
                                                 <td><?= $row['lastname']; ?></td>
                                                 <td><?= $row['address']; ?></td>
