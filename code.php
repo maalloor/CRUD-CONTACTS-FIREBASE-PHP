@@ -4,12 +4,9 @@
 
     if (isset($_POST['save_data']))
     {
-        $first_name = $_POST['nombre'];
-        $last_name = $_POST['apellido'];
-        $address = $_POST['direccion'];
-        $city = $_POST['ciudad'];
-        $gender = $_POST['genero'];
-        $zip = $_POST['codigozip'];
+        $name = $_POST['nombre'];
+        $line = $_POST['linea'];
+        $presentation = $_POST['presentacion'];
 
         $target_path = "images/";
         $target_path = $target_path . md5($_FILES['foto']['name']) . ".jpg";
@@ -19,12 +16,9 @@
             echo "Ha ocurrido un error, trate de nuevo!";
         }
         $postData = [
-            'firstname' => $first_name,
-            'lastname' => $last_name,
-            'address' => $address,
-            'city' => $city,
-            'gender' => $gender,
-            'zip' => $zip,
+            'name' => $name,
+            'line' => $line,
+            'presentation' => $presentation,
             'photo' => "http://localhost/Proyectos/FIREBASE-PHP/".$target_path
         ];
 
@@ -32,12 +26,12 @@
         $postRef = $database->getReference($ref_table)->push($postData);
         if ($postRef)
         {
-            $_SESSION['status'] = "Data Inserted Successfully!";
+            $_SESSION['status'] = "Producto registrado exitosamente !";
             header("Location: http://localhost/Proyectos/FIREBASE-PHP/add-register.php");
         }
         else
         {
-            $_SESSION['status'] = "Data Not Inserted !";
+            $_SESSION['status'] = "Producto no pudo ser registrado !";
             header("Location: http://localhost/Proyectos/FIREBASE-PHP/add-register.php");
         }
     }

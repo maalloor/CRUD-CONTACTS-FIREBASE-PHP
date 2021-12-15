@@ -6,21 +6,18 @@
             <div class="col-md-12">
                 <div class="card mt-4">
                     <div class="card-header">
-                        <h4>FIREBASE CRUD PHP</h4>
-                        <a href="add-register.php" class="btn btn-primary">ADD REGISTER</a>
+                        <h4>Panel de Administrador - Lis Fashion</h4>
+                        <a href="add-register.php" class="btn btn-primary">Agregar Producto</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered" id="table-register">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Photo</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Address</th>
-                                    <th>City</th>
-                                    <th>Gender</th>
-                                    <th>ZIP</th>
+                                    <th>#</th>
+                                    <th>Foto</th>
+                                    <th>Nombre</th>
+                                    <th>Línea</th>
+                                    <th>Presentación</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -41,17 +38,14 @@
                                             <tr>
                                                 <td><?= $account ?></td>
                                                 <td>
-                                                    <img src="<?= $row['photo']; ?>" width="100" alt="">
+                                                    <img src="<?= $row['photo']; ?>" width="100" height="100" alt="">
                                                 </td>
-                                                <td><?= $row['firstname']; ?></td>
-                                                <td><?= $row['lastname']; ?></td>
-                                                <td><?= $row['address']; ?></td>
-                                                <td><?= $row['city']; ?></td>
-                                                <td><?= $row['gender']; ?></td>
-                                                <td><?= $row['zip']; ?></td>
+                                                <td><?= $row['name']; ?></td>
+                                                <td><?= $row['line']; ?></td>
+                                                <td><?= $row['presentation']; ?></td>
                                                 <td>
-                                                    <a href="" class="btn btn-success">Edit</a>
-                                                    <a href="" class="btn btn-danger">Delete</a>
+                                                    <a href="" class="btn btn-success">Editar</a>
+                                                    <a href="" class="btn btn-danger">Eliminar</a>
                                                 </td>
                                             </tr>
                                             <?php
@@ -61,7 +55,7 @@
                                     {
                                         ?>
                                         <tr>
-                                            <td colspan="6">No Record Found</td>
+                                            <td colspan="6">No se encontraron registros</td>
                                         </tr>
                                         <?php
                                     }

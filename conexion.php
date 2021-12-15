@@ -8,9 +8,5 @@ $factory = (new Factory)
     ->withDatabaseUri('https://prueba-php-firebase-default-rtdb.firebaseio.com/');
 
 $database = $factory->createDatabase();
-$storage = $factory->createStorage();
-
-$storageClient = $storage->getStorageClient();
-$anotherBucket = $storage->getBucket('images');
 
 ?>

@@ -7,8 +7,8 @@
             <div class="col-md-12">
                 <div class="card mt-4">
                     <div class="card-header">
-                        <h4>FIREBASE CRUD PHP - ADD OR INSERT NEW REGISTER</h4>
-                        <a href="index.php" class="btn btn-danger">BACK</a>
+                        <h4>Panel de Administrador - Agregar Producto</h4>
+                        <a href="index.php" class="btn btn-danger">Regresar al menú principal</a>
                     </div>
                     <div class="card-body">
                         <?php
@@ -19,40 +19,38 @@
                             }
                         ?>
                         <form enctype="multipart/form-data" action="code.php" method="POST" class="row g-3">
-                            <div class="col-md-6">
-                                <label for="nombre" class="form-label">First Name: </label>
-                                <input type="text" class="form-control" id="nombre" name="nombre">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="apellido" class="form-label">Last Name: </label>
-                                <input type="text" class="form-control" id="apellido" name="apellido">
-                            </div>
-                            <div class="col-12">
-                                <label for="direccion" class="form-label">Address: </label>
-                                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="1234 Main St">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="ciudad" class="form-label">City: </label>
-                                <input type="text" class="form-control" id="ciudad" name="ciudad">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="genero" class="form-label">Gender: </label>
-                                <select id="genero" name="genero" class="form-select">
-                                    <option selected>Select a gender</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="codigozip" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="codigozip" name="codigozip">
-                            </div>
                             <div class="mb-3">
-                                <label for="foto" class="form-label">Enter the photo: </label>
+                                <label for="foto" class="form-label">Ingresa la foto del producto: </label>
                                 <input class="form-control" type="file" id="foto" name="foto">
                             </div>
+                            <div class="col-md-2">
+                                <label for="nombre" class="form-label">Nombre del producto: </label>
+                                <input type="text" class="form-control" id="nombre" name="nombre">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="linea" class="form-label">Líneas: </label>
+                                <select id="linea" name="linea" class="form-select">
+                                    <option selected>Seleccionar una línea</option>
+                                    <option value="Coorporativa">Coorporativa</option>
+                                    <option value="Moda">Moda</option>
+                                    <option value="Seguridad-Industrial">Seguridad Industrial</option>
+                                    <option value="Hotelería-y-Limpieza">Hotelería y Limpieza</option>
+                                    <option value="Salud-y-Alimentacion">Salud y Alimentación</option>
+                                    <option value="Publicidad-y-Promociones">Publicidad y Promociones</option>
+                                    <option value="Marroqueria">Marroquería</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="presentacion" class="form-label">Presentaciones: </label>
+                                <select id="presentacion" name="presentacion" class="form-select">
+                                    <option selected>Seleccionar una presentación</option>
+                                    <option value="Primaria">Primaria</option>
+                                    <option value="Secundaria">Secundaria</option>
+                                    <option value="Terciaria">Terciaria</option>
+                                </select>
+                            </div>
                             <div class="col-12">
-                                <button type="submit" name="save_data" class="btn btn-primary">ADD REGISTER</button>
+                                <button type="submit" name="save_data" class="btn btn-primary">AGREGAR PRODUCTO</button>
                             </div>
                         </form>
                     </div>
